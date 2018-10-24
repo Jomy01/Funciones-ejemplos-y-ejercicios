@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int producto;
+		
+		int numero1, numero2;
+		
+		Console.WriteLine("Introduce el primer número: ");
+		numero1 = LeerEntero();
+		Console.WriteLine("Introduce el segundo numero: ");
+		numero2 = LeerEntero();
+		producto = Producto(numero1, numero2);
+		Console.WriteLine("El producto de los números es: " + producto);
+		
+	}
+	
+	static int Producto(int numero1, int numero2)
+	{
+		int producto;
+		producto = numero1 * numero2;
+		return producto;
+	}
+	static int LeerEntero()
+	{
+		int numeroLeido;
+		numeroLeido = Convert.ToInt32(Console.ReadLine());
+		return numeroLeido;
+}
+}
