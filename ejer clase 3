@@ -1,0 +1,38 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int edad;
+		float ingresos;
+		
+		Console.WriteLine("Introduce la edad: ");
+		edad = LeerEdad();
+		Console.WriteLine("Introduce los ingresos en euros: ");
+		ingresos = LeerIngresos();
+		
+		if (edad > 65 && ingresos < 300)
+		{
+			Console.WriteLine("Es beneficiario de ayudas sociales; sus ingresos pasan a ser de: " + ingresos*1.05f);
+		}
+		else
+		{
+			Console.WriteLine("No es beneficiario de ninguna ayuda; sus ingresos son de: " + ingresos);
+		}
+			
+	}
+	static int LeerEdad()
+	{
+		int edadleida;
+		edadleida = Convert.ToInt32(Console.ReadLine());
+		return edadleida;
+	}
+	
+	static float LeerIngresos()
+	{
+		float ingresosintroducidos;
+		ingresosintroducidos = Convert.ToInt32(Console.ReadLine());
+		return ingresosintroducidos;
+	}
+}
