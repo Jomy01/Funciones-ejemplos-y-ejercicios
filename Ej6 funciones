@@ -1,0 +1,38 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		float vidafinal;
+		float vida;
+		int nivel;
+		
+		Console.WriteLine("Introduce la vida: ");
+		vida = LeerDecimal();
+		Console.WriteLine("Introduce el nivel: ");
+		nivel = LeerEntero();
+		vidafinal = CalcularVidafinal(vida, nivel);
+		Console.WriteLine("La vida final es: " + vidafinal);
+		
+	}
+	
+	static float CalcularVidafinal(float vida, int nivel)
+	{
+		float vidafinal;
+		vidafinal = vida * nivel;
+		return vidafinal;
+	}
+	static int LeerEntero()
+	{
+		int numeroLeido;
+		numeroLeido = Convert.ToInt32(Console.ReadLine());
+		return numeroLeido;
+	}
+	static float LeerDecimal()
+	{
+		float decimalleido;
+		decimalleido = Convert.ToSingle(Console.ReadLine());
+		return decimalleido;
+}
+}
