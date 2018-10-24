@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int suma;
+		
+		int numero1, numero2;
+		
+		Console.WriteLine("Introduc el primer número: ");
+		numero1 = LeerEntero();
+		Console.WriteLine("Introduce el segundo numero: ");
+		numero2 = LeerEntero();
+		suma = Suma(numero1, numero2);
+		Console.WriteLine(suma);
+	}
+	
+	static int Suma(int numero1, int numero2)
+	{
+		int suma;
+		suma = numero1 + numero2;
+		return suma;
+	}
+	static int LeerEntero()
+	{
+		int numeroLeido;
+		numeroLeido = Convert.ToInt32(Console.ReadLine());
+		return numeroLeido;
+}
+}
